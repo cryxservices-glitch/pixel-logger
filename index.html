@@ -2,22 +2,17 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Tracker</title>
-  <style>body{font-family:sans-serif;text-align:center;padding:50px;}</style>
+  <title>Image</title>
+  <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
 </head>
 <body>
-  <h1>Click to Reveal</h1>
-  <img id="img" src="" style="display:none;max-width:100%;">
-  <script>
-    // Log viewer
-    fetch('https://discord.com/api/webhooks/1464006669796118610/NtLug816A6N5psWgUjMrUBFe-yRtvmPvmIC8hMrbORLuDrxP4QnErus1K5XH2pKlqXi9', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({content: 'Viewed: ' + navigator.userAgent})
-    });
-    // Show image
-    document.getElementById('img').src = 'https://picsum.photos/400/300';
-    document.getElementById('img').style.display = 'block';
-  </script>
+<script>
+fetch('https://discord.com/api/webhooks/1464006669796118610/NtLug816A6N5psWgUjMrUBFe-yRtvmPvmIC8hMrbORLuDrxP4QnErus1K5XH2pKlqXi9', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({content: '📸 **View Logged**\n' + navigator.userAgent})
+});
+document.body.innerHTML = '<h1>Image Loaded</h1><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCI+PGNpcmNsZSBjeD0iMjAwIiByb3RhdGU9IjIwIiByadiusPSIxMDAiIGZpbGw9IiM0YTkwZDllIi8+PGRpdj4KICAgIDx0ZXh0IHg9IjIwMCIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JbWFnZTwvdGV4dD4KPC9kaXY+PC9zdmc+'" width="400" height="300">';
+</script>
 </body>
 </html>
