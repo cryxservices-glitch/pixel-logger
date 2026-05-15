@@ -14,4 +14,4 @@ export default function handler(req, res) {
   res.setHeader('Content-Type', 'image/svg+xml');
   res.setHeader('Cache-Control', 'no-store');
   res.status(200).send(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="400" height="300" fill="#4a90d9"/><text x="200" y="150" font-size="24" fill="white" text-anchor="middle">Image</text></svg>`);
-}
+}// trigger deployment
