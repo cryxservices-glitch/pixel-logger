@@ -16,4 +16,4 @@ module.exports = async function handler(req, res) {
   res.setHeader('Content-Type', 'image/gif');
   res.setHeader('Cache-Control', 'no-store');
   res.send(Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64'));
-};
+};// redeploy
